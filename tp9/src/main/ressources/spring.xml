@@ -1,0 +1,90 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+<!-- Client -->
+
+	<bean id="idControllerClient" class="cigma.pfe.controllers.ClientController">
+	
+		<constructor-arg ref="idServiceClient"/>
+	
+	</bean>
+	
+	<bean id="idServiceClient" class="cigma.pfe.services.ClientServiceImpl">
+	
+		<constructor-arg ref="idDaoClient"/>
+	
+	</bean>
+	
+	<bean id="idDaoClient" class="cigma.pfe.dao.ClientDaoImpl"></bean>
+
+
+<!-- Carte fidelio -->
+
+	<bean id="idControllerCarteFidelio" class="cigma.pfe.controllers.CarteFidelioController">
+	
+		<constructor-arg ref="idServiceCarteFidelio"/>
+	
+	</bean>
+	
+	<bean id="idServiceCarteFidelio" class="cigma.pfe.services.CatreFidelioServiceImpl">
+	
+		<constructor-arg ref="idDaoCarteFidelio"/>
+	
+	</bean>
+	
+	<bean id="idDaoCarteFidelio" class="cigma.pfe.dao.CarteFidelioDaoImpl"></bean>
+	
+
+<!-- Facture -->
+
+	<bean id="idControllerFacture" class="cigma.pfe.controllers.FactureController">
+	
+		<constructor-arg ref="idServiceFcature"/>
+	
+	</bean>
+	
+	<bean id="idServiceFcature" class="cigma.pfe.services.FactureServiceImpl">
+	
+		<constructor-arg ref="idDaoFacture"/>
+	
+	</bean>
+	
+	<bean id="idDaoFacture" class="cigma.pfe.dao.FactureDaoImpl"></bean>
+	
+<!-- Produit -->
+
+	<bean id="idControllerProduit" class="cigma.pfe.controllers.ProduitController">
+	
+		<constructor-arg ref="idServiceProduit"/>
+	
+	</bean>
+	
+	<bean id="idServiceProduit" class="cigma.pfe.services.ProduitServiceImpl">
+	
+		<constructor-arg ref="idDaoProduit"/>
+	
+	</bean>
+	
+	<bean id="idDaoProduit" class="cigma.pfe.dao.ProduitDaoImpl"></bean>
+	
+<!-- Promotion -->
+
+	<bean id="idControllerPromotion" class="cigma.pfe.controllers.PromotionController">
+	
+		<constructor-arg ref="idServicePromotion"/>
+	
+	</bean>
+	
+	<bean id="idServicePromotion" class="cigma.pfe.services.PromotionServiceImpl">
+	
+		<constructor-arg ref="idDaoPromotion"/>
+	
+	</bean>
+	
+	<bean id="idDaoPromotion" class="cigma.pfe.dao.PromotionDaoImpl"></bean>
+
+</beans>
+
+
+
