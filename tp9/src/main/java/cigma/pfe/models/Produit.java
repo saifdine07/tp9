@@ -26,6 +26,9 @@ public class Produit {
 	private float prix;
 	private int stock;
 	
+	public Produit(int num) {
+		this.num = num;
+	}
 	public Produit() {
 	}
 	public Produit(String designation, float prix, int stock, List<Facture> factureproduit) {

@@ -21,8 +21,7 @@ public class CarteFidelio {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int num;
 	private String code;
-	
-	
+
 	
 	public CarteFidelio() {
 	}

@@ -10,6 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import cigma.pfe.controllers.CarteFidelioController;
 import cigma.pfe.controllers.ClientController;
 import cigma.pfe.controllers.FactureController;
+import cigma.pfe.controllers.ProduitController;
 import cigma.pfe.models.CarteFidelio;
 import cigma.pfe.models.Client;
 import cigma.pfe.models.Facture;
@@ -21,9 +22,11 @@ public class MonApplication {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-		ClientController ctrl = (ClientController) context.getBean("idControllerClient");
+		//ClientController ctrl = (ClientController) context.getBean("idControllerClient");
 		
-		FactureController ctrlf = (FactureController) context.getBean("idControllerFacture");
+		//FactureController ctrlf = (FactureController) context.getBean("idControllerFacture");
+		
+		ProduitController ctrlp = (ProduitController) context.getBean("idControllerProduit");
 		
 		/*List<Produit> listproduit = Arrays.asList(new Produit("designation", 100, 50, null), new Produit("designation1", 200, 60, null));
 		
@@ -55,9 +58,22 @@ public class MonApplication {
 		
 		//ctrl.delete(cli);*/
 		
-		Facture facture = new Facture(null, null, null);
+		//Facture facture = new Facture(null, null, null);
 		
-		ctrlf.save(facture);
+		//ctrlf.save(facture);
+		
+		
+		//List<Produit> listproduit = Arrays.asList(new Produit("designation", 100, 50, null), new Produit("designation1", 200, 60, null));
+		
+		//List<Facture> listfacture = Arrays.asList(new Facture(new Date(), null, listproduit));
+		
+		//Produit produit = new Produit("designation", 0, 0, listfacture);
+		
+		//ctrlp.save(produit);
+		
+		Produit p = new Produit(5);
+		
+		ctrlp.delete(p);
 		
 	}
 

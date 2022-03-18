@@ -23,20 +23,20 @@ public class ProduitServiceImpl implements IProduitService{
 
 	@Override
 	public void delete(Produit produit) {
-		// TODO Auto-generated method stub
-		
+
+		iproduitdao.delete(produit);
 	}
 
 	@Override
 	public Produit modifier(Produit produit) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return iproduitdao.modifier(produit);
 	}
 
 	@Override
 	public Produit trouver(Produit produit) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return iproduitdao.trouver(produit);
 	}
 
 }
